@@ -1,0 +1,190 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* Sidebar container */
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;   /* ẩn mặc định */
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1000;  /* cao hơn overlay */
+  overflow-y: auto;
+  pointer-events: none;  
+}
+
+.filter-sidebar.open {
+     transform: translateX(0);
+  left: 0; /* hiện ra */
+  pointer-events: auto;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Section */
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: #f5f5f5;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.filter-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Inputs */
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.checkbox-label input,
+.radio-label input {
+  margin-right: 8px;
+}
+
+/* Actions */
+.filter-actions {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.apply-btn {
+  width: 100%;
+  background: #f3ae47;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.apply-btn:hover {
+  background: #faa507;
+}
+
+.clear-btn {
+  width: 100%;
+  background: #f5f5f5;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-btn:hover {
+  background: #e0e0e0;
+}
+/* Date Range container */
+.date-range {
+  display: flex;
+  gap: 12px; /* khoảng cách giữa From - To */
+  width: 100%;
+}
+
+.date-input-group {
+  flex: 1; /* mỗi group chiếm đều 50% */
+  min-width: 0; /* tránh tràn */
+}
+
+.date-input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.date-input-group input[type="date"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box; /* tránh bị tràn */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.date-input-group input[type="date"]:focus {
+  outline: none;
+  border-color: #f3ae47;
+  box-shadow: 0 0 0 2px rgba(243, 174, 71, 0.3);
+}
+.filter-section select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  appearance: none;   /* bỏ style mặc định */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-section select:focus {
+  outline: none;
+  border-color: #f3ae47;
+  box-shadow: 0 0 0 2px rgba(243, 174, 71, 0.3);
+}

@@ -1,0 +1,194 @@
+
+.ci-ticket-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+.ci-breadcrumb {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.ci-breadcrumb .ci-separator {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+/* Thẻ Ticket chính */
+.ci-ticket-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+/* Banner sự kiện */
+.ci-event-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.ci-event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-event-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.ci-event-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Nội dung */
+.ci-ticket-content {
+  padding: 32px;
+}
+
+/* Thông tin vé */
+.ci-ticket-info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.ci-info-left {
+  flex: 1;
+}
+
+.ci-info-item {
+  margin-bottom: 24px;
+}
+
+.ci-info-label {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ci-info-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.ci-info-value.ci-green {
+  color: #f97316;
+}
+
+/* QR */
+.ci-info-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ci-qr-section {
+  text-align: center;
+}
+
+.ci-qr-placeholder {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ci-qr-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.ci-qr-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.ci-qr-lock {
+  font-size: 32px;
+  color: #f97316;
+}
+
+.ci-app-download-text {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.ci-ticketbox-text {
+  color: #f97316;
+  font-weight: 500;
+}
+
+.ci-qr-code-text {
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ci-ticket-container {
+    padding: 16px;
+  }
+
+  .ci-ticket-info-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ci-event-banner {
+    height: 250px;
+  }
+
+  .ci-event-title {
+    font-size: 18px;
+  }
+
+  .ci-ticket-content {
+    padding: 20px;
+  }
+
+  .ci-qr-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+}

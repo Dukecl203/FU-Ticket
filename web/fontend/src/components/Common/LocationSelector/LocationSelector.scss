@@ -1,0 +1,50 @@
+.location-selector {
+  .location-type-select {
+    margin-bottom: 8px;
+  }
+
+  .fpt-location-select {
+    .ant-select-selector {
+      border-color: #fa8c16;
+    }
+    
+    .ant-select-focused .ant-select-selector {
+      border-color: #fa8c16;
+      box-shadow: 0 0 0 2px rgba(250, 140, 22, 0.2);
+    }
+  }
+
+  .custom-location-input {
+    .ant-input {
+      border-color: #fa8c16;
+      
+      &:focus, &:hover {
+        border-color: #fa8c16;
+        box-shadow: 0 0 0 2px rgba(250, 140, 22, 0.2);
+      }
+    }
+  }
+
+  .campus-specific-location {
+    .ant-input {
+      border-color: #fa8c16;
+      
+      &:focus, &:hover {
+        border-color: #fa8c16;
+        box-shadow: 0 0 0 2px rgba(250, 140, 22, 0.2);
+      }
+    }
+  }
+
+  .online-location-input {
+    .ant-input {
+      border-color: #52c41a;
+      
+      &:focus, &:hover {
+        border-color: #52c41a;
+        box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.2);
+      }
+    }
+  }
+
+}

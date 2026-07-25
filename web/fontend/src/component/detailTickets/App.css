@@ -1,0 +1,37 @@
+.tk-app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+/* 🌀 Loading animation */
+.tk-loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+.tk-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #E55A2B; /* màu cam thương hiệu */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tk-loading-text {
+  font-size: 16px;
+  color: #555;
+}

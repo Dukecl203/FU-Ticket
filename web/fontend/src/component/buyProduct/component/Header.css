@@ -1,0 +1,154 @@
+.bp-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.bp-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 24px;
+}
+
+.bp-back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.bp-back-button:hover {
+  color: #000;
+}
+
+.bp-steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.bp-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bp-step-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bp-step.active .bp-step-number {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.bp-step-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bp-step.active .bp-step-label {
+  color: #000;
+}
+
+.bp-step-arrow {
+  flex-shrink: 0;
+}
+
+.bp-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.bp-timer-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.bp-timer-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  font-variant-numeric: tabular-nums;
+}
+
+.bp-event-info-bar {
+  background-color: #f86125;
+  color: #fff;
+  padding: 12px 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.bp-event-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bp-event-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bp-event-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.bp-event-details svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .bp-header-content {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .bp-steps {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bp-step-label {
+    display: none;
+  }
+
+  .bp-timer {
+    align-items: center;
+  }
+
+  .bp-event-info-bar {
+    padding: 10px 16px;
+  }
+
+  .bp-event-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

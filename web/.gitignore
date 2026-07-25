@@ -1,0 +1,8 @@
+node_modules/
+
+# Xóa node_modules khỏi Git (nhưng vẫn giữ lại trên máy)
+git rm -r --cached node_modules
+
+# Commit lại
+git commit -m "Remove node_modules from repository"
+

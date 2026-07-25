@@ -1,0 +1,76 @@
+﻿# === EZRoom-style ignore (shared for portfolio repos) ===
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies & build
+node_modules
+dist
+dist-ssr
+build
+out
+coverage
+.cache
+.turbo
+.next
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.cursor
+.cursorignore
+
+# Expo / React Native
+.expo/
+.expo-shared/
+web-build/
+android/app/build/
+ios/build/
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+
+# Android / Gradle
+.gradle/
+local.properties
+*.apk
+*.ap_
+*.aab
+.cxx/
+captures/
+
+# Java / NetBeans
+**/nbproject/private/
+**/dist/
+*.class
+*.war
+*.ear
+*.jar
+!**/gradle-wrapper.jar
+
+# Prisma / misc
+prisma/*.db
+prisma/*.db-journal
+*.pem
+

@@ -1,0 +1,88 @@
+
+
+.notFoundPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f9fa; 
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.card {
+  background: white;
+  padding: 48px;
+  border-radius: 16px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #e9ecef;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.iconWrapper {
+  font-size: 64px;
+  line-height: 1;
+  color: #ff7b00; 
+  margin-bottom: 24px;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+
+  background: linear-gradient(180deg, #ff7b00 0%, #ff5500 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212529; 
+  margin: 16px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666; 
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.homeButton {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff7b00 0%, #ff5500 100%);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

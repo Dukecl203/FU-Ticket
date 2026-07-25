@@ -1,0 +1,92 @@
+.trending-container {
+  background-color:var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.trending-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.trending-header h2 {
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.trending-card {
+  position: relative;
+  padding: 0 50px;   /* tăng khoảng cách để số không bị lấn */
+  overflow: visible; /* số được lòi ra ngoài */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trending-card:hover {
+  transform: translateY(-6px); /* nổi lên nhẹ khi hover */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); */
+  z-index: 3; /* nổi lên trên các card khác */
+}
+
+.image-wrapper {
+  position: relative;
+  z-index: 1; /* giữ ảnh nổi trên số */
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.trending-card:hover .image-wrapper img {
+  transform: scale(1.05); /* zoom ảnh nhẹ khi hover */
+}
+
+.trending-card .rank {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 140px;
+  font-weight: 900;
+  font-family: 'Bungee Outline', sans-serif; /* font nghệ thuật */
+  
+  color: #ff6b35;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.event-name {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+
+.trending-card:hover .event-name {
+  color: #ff6b35; /* đổi màu khi hover */
+}
+
+.event-date {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.emoji {
+  font-size: 22px;
+}

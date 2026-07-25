@@ -1,0 +1,341 @@
+.es-event-form-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff 0%, #fff5f0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.es-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(255, 140, 0, 0.1);
+  border: 2px solid #fff5f0;
+}
+
+.es-form-title {
+  color: #ff8c00;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.es-form-subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.es-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.es-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.es-form-group label {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.es-form-group input,
+.es-form-group select,
+.es-form-group textarea {
+  padding: 0.875rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.es-form-group input:focus,
+.es-form-group select:focus,
+.es-form-group textarea:focus {
+  outline: none;
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.es-form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ff8c00' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  padding-right: 2.5rem;
+}
+
+.es-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.es-submit-button {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff6600 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.es-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+.es-submit-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .es-form-card {
+    padding: 2rem;
+  }
+
+  .es-form-title {
+    font-size: 2rem;
+  }
+
+  .es-event-form-container {
+    padding: 1rem;
+  }
+}
+
+/* ====== Phần style thứ 2 gộp lại, vẫn thêm tiền tố ====== */
+
+.es-event-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 20px;
+}
+
+.es-form-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+}
+
+.es-form-title {
+  font-size: 26px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.es-form-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.es-form-group {
+  margin-bottom: 18px;
+}
+
+.es-form-group label {
+  font-weight: 600;
+  color: #374151;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.es-form-group input,
+.es-form-group textarea,
+.es-form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.es-form-group input:focus,
+.es-form-group textarea:focus {
+  border-color: #e98818;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.es-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.es-category-item {
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.es-category-item.es-active {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.es-submit-button {
+  width: 100%;
+  background: #fd951d;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+
+.es-submit-button:hover {
+  background: #c27217;
+}
+/* Event Suggestions CSS - Gộp và Tối ưu hóa */
+
+.es-event-form-container {
+    min-height: 100vh;
+    /* Dùng background trắng/nhạt thống nhất với form */
+    background: linear-gradient(135deg, #fff 0%, #fff5f0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.es-form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 600px;
+    width: 100%;
+    /* Shadow nhẹ nhàng, hợp tông cam */
+    box-shadow: 0 10px 40px rgba(255, 140, 0, 0.1);
+    border: 2px solid #ffe0c1;
+}
+
+.es-form-title {
+    color: #ff7e00; /* Màu cam chủ đạo */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.es-form-subtitle {
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.es-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.es-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 18px; /* Giữ khoảng cách giữa các group */
+}
+
+.es-form-group label {
+    color: #374151;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.es-form-group input,
+.es-form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: white;
+    outline: none;
+}
+
+.es-form-group input:focus,
+.es-form-group textarea:focus {
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+}
+
+.es-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Các styles cho Category đã bị loại bỏ trong component mới, nhưng tôi giữ lại
+   các input/button liên quan đến form */
+
+.es-submit-button {
+    width: 100%;
+    /* Dùng gradient cam/đỏ */
+    background: linear-gradient(135deg, #ff8c00 0%, #ff6600 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.es-submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+.es-submit-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .es-form-card {
+        padding: 2rem;
+    }
+    .es-form-title {
+        font-size: 2rem;
+    }
+    .es-event-form-container {
+        padding: 1rem;
+    }
+}

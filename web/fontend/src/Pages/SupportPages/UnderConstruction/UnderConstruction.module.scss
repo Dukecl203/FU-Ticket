@@ -1,0 +1,116 @@
+// UnderConstruction.module.scss
+.underConstructionPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.card {
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  border: 1px solid #e9ecef;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.iconWrapper {
+  font-size: 64px;
+  line-height: 1;
+  color: #ff7b00;
+  margin-bottom: 24px;
+  animation: pulse 2s infinite;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 16px 0;
+  background: linear-gradient(180deg, #ff7b00 0%, #ff5500 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+// === NÚT CHUNG ===
+%baseButton {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.homeButton {
+  @extend %baseButton;
+  color: white;
+  background: linear-gradient(135deg, #ff7b00 0%, #ff5500 100%);
+  box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+  }
+}
+
+.backButton {
+  @extend %baseButton;
+  color: #ff7b00;
+  background-color: #fff;
+  border: 2px solid #ff7b00;
+
+  &:hover {
+    background-color: rgba(255, 123, 0, 0.05);
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.1);
+  }
+}
+
+// === HIỆU ỨNG ===
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

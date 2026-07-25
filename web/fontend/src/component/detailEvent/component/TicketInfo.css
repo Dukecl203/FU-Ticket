@@ -1,0 +1,251 @@
+.de-ticket-info {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.de-ticket-info h2 {
+  background: #2d2d2d;
+  color: white;
+  margin: 0;
+  padding: 20px 25px;
+  font-size: 1.4em;
+}
+
+.de-tickets-list {
+  background: #2d2d2d;
+}
+
+.de-ticket-card {
+  background: #3a3a3a;
+  margin: 0;
+  border-bottom: 1px solid #4a4a4a;
+  transition: background-color 0.2s ease;
+}
+
+.de-ticket-card:last-child {
+  border-bottom: none;
+}
+
+.de-ticket-card:hover {
+  background: #000000;
+}
+
+.de-ticket-card.de-popular {
+  position: relative;
+  background: #020303;
+}
+
+.de-ticket-card.de-popular:hover {
+  background: #345040;
+}
+
+.de-ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 25px 10px;
+  gap: 20px;
+}
+
+.de-ticket-name-section {
+  flex: 1;
+}
+
+.de-ticket-name {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.de-popular-badge {
+  background: #22c55e;
+  color: white;
+  font-size: 0.75em;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.de-ticket-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.de-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.de-original-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.9em;
+}
+
+.de-current-price {
+  color: #fbbf24;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.de-buy-button {
+  background: #f97316;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.de-buy-button.de-expired {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.de-buy-button:hover {
+  background: #ea580c;
+}
+
+.de-ticket-body {
+  padding: 0 25px 20px;
+}
+
+.de-ticket-description {
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+  white-space: pre-wrap;
+}
+
+.de-ticket-note {
+  color: #999;
+  font-size: 0.8em;
+  line-height: 1.4;
+  margin: 0;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .de-ticket-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .de-ticket-price-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .de-price-container {
+    align-items: flex-start;
+  }
+}
+
+/* Toast */
+.de-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 14px;
+  animation: de-fadeIn 0.3s ease;
+}
+
+.de-toast button {
+  background: none;
+  border: none;
+  color: #fff;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@keyframes de-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* TicketInfo.css - Bổ sung và Điều chỉnh */
+
+/* 1. Cấu trúc Header (Điều chỉnh lại để chứa 3 phần) */
+.de-ticket-header {
+ display: flex;
+ /* Thay đổi căn chỉnh nếu cần, giữ space-between */
+ justify-content: space-between; 
+ align-items: flex-start;
+ padding: 20px 25px 10px;
+ gap: 20px;
+}
+
+/* 2. Phần Tên/Mô tả */
+.de-ticket-name-section {
+ flex: 1; /* Cho phép nó mở rộng */
+}
+
+/* 3. Thêm style cho container ảnh */
+.de-product-image-container {
+ /* Tăng kích thước ảnh cho sản phẩm */
+ width: 100px; 
+ height: 100px;
+ flex-shrink: 0; /* Không co lại */
+ align-self: center; /* Căn giữa theo chiều dọc trong header */
+ border-radius: 8px;
+ overflow: hidden;
+ border: 1px solid #4a4a4a;
+}
+
+.de-product-image {
+ width: 100%;
+ height: 100%;
+ object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp */
+}
+
+
+/* 4. Phần Giá/Nút */
+.de-ticket-price-section {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ gap: 10px;
+ flex-shrink: 0; /* Không co lại */
+}
+
+
+/* Căn chỉnh cho Responsive (Nếu dùng Flex-direction: column) */
+@media (max-width: 768px) {
+ .de-ticket-header {
+    /* Đổi thành cột để ảnh không bị bóp nhỏ */
+    flex-direction: column; 
+  align-items: stretch;
+ }
+
+ .de-product-image-container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 150px;
+    margin-top: 10px;
+  align-self: stretch; /* Mở rộng */
+ }
+
+ .de-ticket-price-section {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ }
+}

@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dae-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 40px 20px;
+}
+
+.dae-header {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 50px;
+}
+
+.dae-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ff7e00;
+  text-shadow: 1px 1px 2px rgba(255, 126, 0, 0.2);
+}
+
+.dae-date {
+  font-size: 18px;
+  color: #4a5568;
+  opacity: 0.9;
+}
+
+.dae-loading {
+  text-align: center;
+  color: #ff7e00;
+  font-size: 24px;
+  padding: 100px;
+}
+
+.dae-suggestions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.dae-event-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(255, 126, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffe0c1;
+}
+
+.dae-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 126, 0, 0.25);
+}
+
+.dae-event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.dae-event-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.dae-attendees-badge {
+  background: linear-gradient(135deg, #ff9a76 0%, #ff7e00 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dae-event-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.dae-event-info {
+  background: #fff8f3;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.dae-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.dae-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.dae-info-icon {
+  font-size: 18px;
+  color: #ff7e00;
+}
+
+.dae-event-section {
+  margin-bottom: 20px;
+}
+
+.dae-event-section h3 {
+  color: #ff7e00;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffe0c1;
+}
+
+.dae-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dae-list li {
+  padding: 8px 0 8px 24px;
+  color: #4a5568;
+  line-height: 1.5;
+  position: relative;
+  font-size: 14px;
+}
+
+.dae-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff7e00;
+  font-weight: 700;
+}
+
+.dae-register-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #ff9a76 0%, #ff7e00 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 126, 0, 0.3);
+}
+
+.dae-register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 126, 0, 0.4);
+}
+
+.dae-register-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .dae-header h1 {
+    font-size: 36px;
+  }
+
+  .dae-suggestions-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dae-event-card {
+    padding: 24px;
+  }
+
+  .dae-event-name {
+    font-size: 20px;
+  }
+
+  .dae-attendees-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+.dae-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #f8ae0e, #f7a121);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+
+.dae-back-btn:hover {
+  background: linear-gradient(135deg, #f86226, #fad42b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.35);
+}
+
+.dae-back-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(79, 70, 229, 0.25);
+}
+
+.dae-back-btn:focus {
+  outline: 2px solid #a78bfa;
+  outline-offset: 3px;
+}
+/* 🌈 Toàn trang loading */
+.dae-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: radial-gradient(circle at 30% 30%, #f0f4ff, #e0e7ff);
+  color: #fda24c;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🌀 Spinner xoay */
+.dae-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #c7d2fe;
+  border-top-color: #f85211;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+/* ✨ Chữ động mượt */
+.dae-loading-text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s infinite;
+}
+
+/* 🌀 Animation keyframes */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,122 @@
+.pu-review-popup {
+  position: fixed;
+  inset: 0; /* <-- phủ toàn màn hình, tương đương top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  backdrop-filter: blur(2px); /* Hiệu ứng mờ nhẹ nền */
+  animation: fadeIn 0.25s ease;
+}
+
+.pu-review-popup__content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: popupIn 0.25s ease;
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pu-review-popup__content:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.pu-review-popup__content h2 {
+  color: #ff7b00;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.pu-rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pu-star {
+  font-size: 32px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.25s, transform 0.15s;
+}
+
+.pu-star.active {
+  color: #ffb703;
+  transform: scale(1.2);
+}
+
+.pu-textarea {
+  width: 100%;
+  height: 90px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.pu-textarea:focus {
+  border-color: #ffb703;
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.2);
+}
+
+.pu-review-popup__actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pu-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pu-btn.primary {
+  background-color: #ffb703;
+  color: #fff;
+}
+
+.pu-btn.primary:hover {
+  background-color: #ffa200;
+  transform: translateY(-1px);
+}
+
+.pu-btn:hover {
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

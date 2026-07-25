@@ -1,0 +1,155 @@
+.mt-ticket-card {
+  display: flex;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mt-ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 123, 0, 0.2);
+}
+
+.mt-ticket-date {
+  background-color: #fff5ec;
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffd5b8;
+}
+
+.mt-date-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff7b00;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.mt-date-month {
+  font-size: 14px;
+  color: #b35b00;
+  margin-bottom: 2px;
+}
+
+.mt-date-year {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff7b00;
+}
+
+.mt-ticket-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mt-ticket-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.mt-ticket-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mt-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.mt-badge-success {
+  background-color: #ff7b00;
+  color: #fff;
+}
+
+.mt-badge-online {
+  background-color: transparent;
+  color: #ff7b00;
+  border: 1px solid #ff7b00;
+}
+
+.mt-badge-default {
+  background-color: #f1f1f1;
+  color: #555;
+}
+
+.mt-ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mt-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #444;
+  font-size: 14px;
+}
+
+.mt-info-icon {
+  font-size: 16px;
+  margin-top: 2px;
+  color: #ff7b00;
+}
+
+.mt-info-text {
+  line-height: 1.5;
+}
+
+.mt-venue-address {
+  color: #777;
+}
+.mt-status {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.mt-success {
+  background-color: #e8f8ee;
+  color: #1a9b5b;
+}
+
+.mt-pending {
+  background-color: #fff4e0;
+  color: #ff9800;
+}
+
+.mt-failed {
+  background-color: #fdecea;
+  color: #d32f2f;
+}
+
+.mt-default {
+  background-color: #f0f0f0;
+  color: #666;
+}
+.mt-ticket-time {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}

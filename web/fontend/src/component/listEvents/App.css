@@ -1,0 +1,110 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, #f47920, #dbcbb2, #f47920);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #e0e7ff;
+}
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;   /* stack theo chiều dọc */
+  align-items: center;      /* căn giữa ngang */
+  text-align: center;       /* căn giữa chữ */
+}
+
+
+/* Main */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.content-layout {
+  display: flex;
+  gap: 2rem;
+}
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+.events-section {
+  flex: 1;
+}
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.results-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+.results-header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+.filter-btn {
+  background-color: #e59346;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background-color: #f47920;
+}
+
+/* Grid */
+/* Grid cho Event Cards */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột */
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr; /* 1 cột */
+  }
+}
+
+.hero-search {
+  margin-top: 2rem; /* cách chữ ra 1 đoạn */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-search form {
+  width: 100%;
+  max-width: 900px;
+}

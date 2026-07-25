@@ -1,0 +1,283 @@
+.dashboardContainer {
+  padding: 0;
+
+  h1 {
+    color: #ff7b00;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.dashboardSubtitle {
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.dashboardCardtitle {
+  color: #ff7b00;;
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.statsRow {
+  margin-bottom: 24px;
+}
+
+.statsCard {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
+  height: 100%;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.statTrend {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+.dashboardCard {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+
+  .ant-card-head-title {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.statusItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.statusInfo {
+  display: flex;
+  align-items: center;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.statusCount {
+  text-align: right;
+
+  strong {
+    font-size: 16px;
+    color: #333;
+  }
+
+  span {
+    font-size: 12px;
+    color: #999;
+    margin-left: 4px;
+  }
+}
+
+.activityItem {
+  padding: 4px 0;
+}
+
+.activityAction {
+  font-weight: 500;
+  color: #333;
+}
+
+.activityDetails {
+  font-size: 13px;
+  color: #666;
+  margin: 2px 0;
+}
+
+.activityTime {
+  font-size: 12px;
+  color: #999;
+}
+
+.participantsInfo {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top: 4px;
+}
+
+.completionStats {
+  padding: 8px 0;
+}
+
+.completionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.completionLabel {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.completionValue {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.quickActions {
+  padding: 8px 0;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .statsCard {
+    margin-bottom: 16px;
+  }
+  
+  .dashboardCard {
+    margin-bottom: 16px;
+  }
+
+  .dashboardContainer {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+// Custom table styles
+:global {
+  .ant-table {
+    border-radius: 8px;
+    
+    .ant-table-thead > tr > th {
+      background-color: #fafafa;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .ant-table-tbody > tr:hover > td {
+      background-color: #fff9e6;
+    }
+  }
+  
+  .ant-timeline-item-tail {
+    border-left: 2px solid #f0f0f0;
+  }
+  
+  .ant-list-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 0;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// Custom button styles
+.primaryButton {
+  background: linear-gradient(135deg, #ff7b00 0%, #ff5500 100%);
+  border: none;
+  border-radius: 8px;
+  
+  &:hover {
+    background: linear-gradient(135deg, #ff5500 0%, #ff3d00 100%);
+    box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+  }
+}
+
+// Action buttons styles
+.actionButtons {
+  .viewButton {
+    color: #1890ff;
+    border-color: #1890ff;
+    
+    &:hover {
+      color: #40a9ff;
+      border-color: #40a9ff;
+      background-color: rgba(24, 144, 255, 0.1);
+    }
+  }
+  
+  .editButton {
+    color: #ff7b00;
+    border-color: #ff7b00;
+    
+    &:hover {
+      color: #ff9c33 !important;
+      border-color: #ff9c33 !important;
+      background-color: rgba(255, 123, 0, 0.1);
+    }
+  }
+  
+  .deleteButton {
+    color: #ff4d4f;
+    border-color: #ff4d4f;
+    
+    &:hover {
+      color: #ff7875;
+      border-color: #ff7875;
+      background-color: rgba(255, 77, 79, 0.1);
+    }
+  }
+}
+
+// Tag styles
+.statusTag {
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-weight: 500;
+  
+  &.active {
+    background-color: #f6ffed;
+    border-color: #b7eb8f;
+    color: #52c41a;
+  }
+  
+  &.upcoming {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+    color: #1890ff;
+  }
+  
+  &.completed {
+    background-color: #fff2e8;
+    border-color: #ffbb96;
+    color: #fa8c16;
+  }
+}

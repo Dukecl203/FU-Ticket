@@ -1,0 +1,18 @@
+@use "../../../styles/mixins" as mixins;
+
+.notification-custom {
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  justify-content: flex-start;
+  display: flex;
+  width: max-content;
+  max-width: 450px;
+  min-width: 320px;
+}
+
+@include mixins.responsive("sm") {
+  .notification-custom {
+    max-width: 350px;
+    min-width: 300px;
+  }
+}

@@ -1,0 +1,379 @@
+.manageEventsContainer {
+  padding: 0;
+
+  h1 {
+    color: #ff7b00;
+    margin-bottom: 24px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+// Styles for statistics cards
+.statsRow {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-bottom: 24px;
+
+  .ant-col {
+    margin-bottom: 16px;
+
+    .ant-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0f0f0;
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .ant-card-body {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+
+// Filter section styles
+.filterCard {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+
+  .ant-card-body {
+    padding: 20px;
+  }
+}
+
+.filterSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+
+  .searchInput {
+    width: 300px;
+
+    .ant-input-affix-wrapper {
+      border-radius: 8px;
+      border: 1px solid #d9d9d9;
+
+      &:hover,
+      &:focus {
+        border-color: #ff7b00;
+        box-shadow: 0 0 0 2px rgba(255, 123, 0, 0.1);
+      }
+    }
+  }
+
+  .filterSelect {
+    width: 150px;
+
+    .ant-select-selector {
+      border-radius: 8px;
+      border: 1px solid #d9d9d9;
+
+      &:hover,
+      &:focus {
+        border-color: #ff7b00;
+        box-shadow: 0 0 0 2px rgba(255, 123, 0, 0.1);
+      }
+    }
+  }
+
+  .addButton {
+    background: linear-gradient(135deg, #ff7b00 0%, #ff5500 100%);
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+
+    &:hover {
+      background: linear-gradient(135deg, #ff5500 0%, #ff3d00 100%);
+      box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+    }
+  }
+}
+
+// Table styles
+.tableCard {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+
+  .ant-card-body {
+    padding: 0;
+  }
+}
+
+.eventsTable {
+  .ant-table {
+    border-radius: 8px;
+
+    .ant-table-thead > tr > th {
+      background-color: #fafafa;
+      font-weight: 600;
+      color: #333;
+      padding: 16px;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 12px 16px;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background-color: #fff9e6;
+    }
+  }
+}
+
+// Action buttons
+.actionButtons {
+  .viewButton {
+    color: #1890ff;
+    border-color: #1890ff;
+
+    &:hover {
+      color: #40a9ff;
+      border-color: #40a9ff;
+      background-color: rgba(24, 144, 255, 0.1);
+    }
+  }
+
+  .editButton {
+    color: #ff7b00;
+    border-color: #ff7b00;
+
+    &:hover {
+      color: #ff9c33 !important;
+      border-color: #ff9c33 !important;
+      background-color: rgba(255, 123, 0, 0.1);
+    }
+  }
+
+  .deleteButton {
+    color: #ff4d4f;
+    border-color: #ff4d4f;
+
+    &:hover {
+      color: #ff7875;
+      border-color: #ff7875;
+      background-color: rgba(255, 77, 79, 0.1);
+    }
+  }
+}
+
+// Modal styles
+.eventModal {
+  .ant-modal-content {
+    border-radius: 12px;
+
+    .ant-modal-header {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      .ant-modal-title {
+        font-weight: 600;
+        color: #333;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 24px;
+    }
+  }
+}
+
+.formItem {
+  .ant-form-item-label > label {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+
+    &:hover,
+    &:focus {
+      border-color: #ff7b00;
+      box-shadow: 0 0 0 2px rgba(255, 123, 0, 0.1);
+    }
+  }
+}
+
+.modalButtons {
+  .submitButton {
+    background: linear-gradient(135deg, #ff7b00 0%, #ff5500 100%);
+    border: none;
+    border-radius: 8px;
+
+    &:hover {
+      background: linear-gradient(135deg, #ff5500 0%, #ff3d00 100%);
+      box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+    }
+  }
+
+  .cancelButton {
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+
+    &:hover {
+      border-color: #ff7b00;
+      color: #ff7b00;
+    }
+  }
+}
+
+// Tag styles
+.statusTag {
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-weight: 500;
+
+  &.active {
+    background-color: #f6ffed;
+    border-color: #b7eb8f;
+    color: #52c41a;
+  }
+
+  &.upcoming {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+    color: #1890ff;
+  }
+
+  &.completed {
+    background-color: #fff2e8;
+    border-color: #ffbb96;
+    color: #fa8c16;
+  }
+}
+
+// Price display
+.priceDisplay {
+  font-weight: 600;
+
+  &.free {
+    color: #52c41a;
+  }
+
+  &.paid {
+    color: #ff7b00;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .manageEventsContainer {
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .filterSection {
+    flex-direction: column;
+    align-items: stretch;
+
+    .searchInput,
+    .filterSelect {
+      width: 100%;
+    }
+
+    .addButton {
+      width: 100%;
+    }
+  }
+
+  .statsRow {
+    .ant-col {
+      margin-bottom: 16px;
+    }
+  }
+
+  .actionButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .ant-btn {
+      width: 100%;
+    }
+  }
+}
+
+// Custom scrollbar for table
+.eventsTable ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.eventsTable ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.eventsTable ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.eventsTable ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.statCard {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: #ff7b00;
+    box-shadow: 0 6px 16px rgba(255, 123, 0, 0.25);
+  }
+}
+
+.activeCard {
+  border: 2px solid #ff7b00 !important;
+  background: linear-gradient(135deg, #fff6ed 0%, #ffe6d2 100%);
+  box-shadow: 0 6px 18px rgba(255, 123, 0, 0.3);
+  transform: translateY(-3px);
+
+  .ant-statistic-title {
+    color: #ff7b00;
+  }
+
+  .ant-statistic-content-value {
+    color: #ff5500;
+    font-weight: 700;
+  }
+}
+
+.filterInfo {
+  margin: 16px 0;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+.filterCount {
+  font-weight: bold;
+  color: #1890ff;
+  margin-left: 8px;
+}
+
+.truncateText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

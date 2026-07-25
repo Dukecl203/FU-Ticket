@@ -1,0 +1,286 @@
+.event-hero {
+  background: linear-gradient(135deg, #e6810f 0%, #e65c0c 100%);
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.event-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.event-info {
+  flex: 1;            /* chiếm 50% */
+  max-width: 55%;     /* không cho full */
+}
+
+.event-title {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.meta-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.meta-text {
+  color: #fff;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.age-rating {
+  font-weight: bold;
+  color: #ffd966; /* vàng nhấn mạnh +18 */
+}
+
+.location {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.location-icon {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.location-text {
+  color: #fff;
+}
+
+.location-detail {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.location-detail p {
+  margin-bottom: 8px;
+}
+
+.location-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.location-detail ul,
+.location-detail ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.location-detail li {
+  margin-bottom: 4px;
+}
+
+.location-detail a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+.event-date {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.price-label {
+  opacity: 0.9;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.price-arrow {
+  color: #4ade80;
+  font-size: 20px;
+}
+
+.cta-button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #16a34a;
+}
+
+.event-artwork {
+  flex: 1;            /* chiếm 50% */
+  max-width: 45%;     /* ảnh chiếm phần còn lại */
+  display: flex;
+  justify-content: flex-end; /* đẩy sát bên phải */
+}
+
+.artwork-container {
+  width: 100%;
+  max-width: 15000px;   /* không cho ảnh quá to */
+  border-radius: 20px;
+  overflow: hidden;
+}
+.artwork-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.artwork-container img.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wave-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.15) 10px,
+    rgba(255,255,255,0.15) 20px
+  );
+  border-radius: 0 0 20px 20px;
+}
+
+@media (max-width: 768px) {
+  .event-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .event-title {
+    font-size: 2em;
+  }
+}
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Nút chia sẻ chung */
+.share-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Hiệu ứng hover */
+.share-button:hover {
+  background: var(--primary-orange);
+  color: #fff;
+  transform: scale(1.1);
+  border-color: var(--primary-orange);
+}
+
+/* Hiệu ứng khi đã sao chép link */
+.share-button.copied {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Tooltip mặc định (hiển thị từ title) */
+.share-button[title] {
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .share-buttons {
+    gap: 8px;
+  }
+
+  .share-button {
+    padding: 8px;
+  }
+}
+.share-button::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.share-button:hover::after {
+  opacity: 1;
+}

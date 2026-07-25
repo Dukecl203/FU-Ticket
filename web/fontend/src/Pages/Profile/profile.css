@@ -1,0 +1,622 @@
+/* Profile Page Container */
+.profile-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page Layout */
+.profile-page-layout {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.profile-avatar {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.profile-avatar p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.profile-avatar svg {
+  color: #f1a634;
+  background: #ebf5fb;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+/* Navigation */
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  transition: all 0.2s ease;
+}
+
+.profile-nav-item:hover {
+  background-color: #f8f9fa;
+  color: #e07b28;
+}
+
+.profile-nav-item.active {
+  background-color: #e3f2fd;
+  color: #e97121;
+  font-weight: 500;
+}
+
+.profile-nav-item.logout {
+  color: #e74c3c;
+  margin-top: 1rem;
+}
+
+.profile-nav-item.logout:hover {
+  background-color: #fde8e8;
+}
+
+/* Main Content */
+.profile-main-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  min-height: 70vh;
+}
+
+/* Page Title */
+.profile-page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  color: #2c3e50;
+}
+
+/* Form Styles */
+.profile-section {
+  margin-bottom: 2.5rem;
+}
+
+.profile-section:last-child {
+  margin-bottom: 0;
+}
+
+.profile-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.profile-form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.profile-form-row label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.profile-form-row input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+.profile-form-row input:focus {
+  outline: none;
+  border-color: #f7e05d;
+  box-shadow: 0 0 0 3px rgba(250, 166, 11, 0.2);
+}
+
+.profile-form-row p {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0;
+  color: #4a5568;
+}
+
+/* Buttons */
+.profile-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile-button.primary {
+  background-color: #ffb20c;
+  color: white;
+}
+
+.profile-button.primary:hover {
+  background-color: #f59a13;
+  transform: translateY(-1px);
+}
+
+.profile-button.primary:disabled {
+  background-color: #ebbb21;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-button.secondary {
+  background-color: #f1f3f5;
+  color: #4a5568;
+}
+
+.profile-button.secondary:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Tickets List */
+.tickets-list,
+.transactions-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Transaction Card */
+.transaction-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  gap: 1rem;
+}
+
+.transaction-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ebf5fb;
+  color: #e68f1f;
+  font-size: 1.25rem;
+}
+
+.transaction-icon .payment-icon {
+  color: #2ecc71;
+}
+
+.transaction-icon .ticket-icon {
+  color: #e74c3c;
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.transaction-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.transaction-amount.positive {
+  color: #2ecc71;
+}
+
+.transaction-amount.negative {
+  color: #e74c3c;
+}
+
+.transaction-date {
+  margin: 0.25rem 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.transaction-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.transaction-status.completed {
+  background-color: #e8f8f0;
+  color: #27ae60;
+}
+
+.transaction-status.pending {
+  background-color: #fef9e7;
+  color: #f39c12;
+}
+
+.transaction-status.failed,
+.transaction-status.cancelled {
+  background-color: #fdedec;
+  color: #e74c3c;
+}
+
+.ticket-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-card h3 {
+  margin: 0 0 0.75rem;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.ticket-card p {
+  margin: 0.25rem 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+/* Loading and Empty States */
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #718096;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page-layout {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .profile-sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-main-content {
+    padding: 1.5rem;
+  }
+  
+  .profile-form-actions {
+    flex-direction: column;
+  }
+  
+  .profile-button {
+    width: 100%;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-main-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Wallet */
+.wallet-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.wallet-balance-card {
+  background: linear-gradient(135deg, #ff7a00, #ff9f4d);
+  color: white;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.wallet-balance-card h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wallet-balance {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.wallet-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.wallet-btn.deposit {
+  background: #ff7a00;
+  color: white;
+}
+
+.wallet-btn.deposit:hover {
+  background: #e56c00;
+}
+
+.wallet-btn.withdraw {
+  background: white;
+  border: 2px solid #ff7a00;
+  color: #ff7a00;
+}
+
+.wallet-btn.withdraw:hover {
+  background: #fff4e7;
+}
+/* ====== TRANSACTION TAB ====== */
+
+.transactions-container {
+  padding: 20px;
+}
+
+.loading-text,
+.no-transactions {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.transaction-card {
+  background: #fff;
+  border: 1px solid #ffd4a3;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.25s ease;
+}
+
+.transaction-card:hover {
+  border-color: #ff8a00;
+  box-shadow: 0 3px 8px rgba(255, 166, 0, 0.25);
+}
+
+.trans-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.trans-desc {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff7a00;
+}
+
+.trans-date {
+  margin-top: 5px;
+  color: #777;
+  font-size: 14px;
+}
+
+.trans-right {
+  display: flex;
+  align-items: center;
+}
+
+.trans-amount {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.trans-amount.add {
+  color: #00a843;
+}
+
+.trans-amount.subtract {
+  color: #e63946;
+}
+
+/* ACTIVE TAB màu cam */
+.profile-nav-item.active {
+  background-color: #ff6f00 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.profile-nav-item.active:hover {
+  background-color: #ff8a26 !important;
+}
+/* Overlay mờ toàn màn hình */
+.topup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Container Modal */
+.topup-container {
+  width: 400px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+  animation: fadeIn 0.25s ease;
+  text-align: center;
+}
+
+.topup-title {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Input */
+.topup-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-momo {
+  background: #f5632a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-momo:hover {
+  background: #db531f;
+}
+
+.btn-cancel {
+  background: #fff;
+  color: #f5632a;
+  border: 2px solid #f5632a;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-cancel:hover {
+  background: #fff5f0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

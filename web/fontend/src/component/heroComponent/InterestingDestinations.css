@@ -1,0 +1,71 @@
+.destinations {
+  padding: 20px;
+  background:  var(--white); /* nền tối giống ảnh bạn gửi */
+  border-radius: 10px;
+}
+
+.destinations-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* Responsive: adjust for smaller screens */
+@media (max-width: 1024px) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.destination-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(241, 129, 23, 0.8), rgba(0, 128, 0, 0));
+}
+
+.destination-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}

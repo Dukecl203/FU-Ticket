@@ -1,0 +1,156 @@
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.event-card__image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.event-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card__price {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #22c55e;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+/* Status badge bên trái */
+.event-status {
+  position: absolute;
+  top: 12px;
+  left: 12px;  /* trái thay vì right */
+  background: #ef4444;  /* đỏ để khác biệt */
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.event-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.event-card__overlay h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.event-card__overlay p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Details */
+/* Bao toàn bộ chi tiết thành flex column */
+.event-card__details {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: 14px;
+  color: #444;
+  height: 100%; /* cho phép flex-grow hoạt động */
+}
+
+/* Phần nội dung trên */
+.event-card__details-content {
+  flex: 1; /* chiếm hết không gian có thể */
+}
+
+/* Phần nút */
+.event-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto; /* đẩy xuống cuối */
+}
+
+
+.event-card__row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.event-card__row .icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.venue {
+  font-weight: 600;
+  color: #222;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+}
+
+.event-card__attendees {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f59e0b;
+}
+
+/* Buttons */
+.event-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+.btn.primary {
+  background: #f5be6c;
+  color: #fff;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #eb8220;
+}

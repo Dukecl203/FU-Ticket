@@ -1,0 +1,136 @@
+.event-section {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 107, 53, 0.08); /* bóng nhẹ nền */
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d1d5db;
+  margin-bottom: 15px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  margin-right: 25px;
+  padding: 10px 5px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 140, 0, 0.4); /* bóng cam nhẹ */
+}
+
+.tab:hover {
+  color: #ff6b35;
+}
+
+.tab.active {
+  color: #ff6b35;
+  border-color: #22c55e;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 107, 53, 0.6);
+}
+
+.see-more {
+  margin-left: auto;
+  font-size: 14px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 165, 0, 0.3);
+}
+.see-more:hover {
+  color: #ff6b35;
+}
+
+/* Event card */
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(255, 107, 53, 0.15);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  margin-left: 6px;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 107, 53, 0.25);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+/* Chữ có bóng nhẹ và cách lề */
+.card-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+  padding-left: 2px;
+  color: #222;
+  text-shadow: 1px 1px 3px rgba(255, 140, 0, 0.2);
+  height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #22c55e;
+  margin-top: auto;
+  padding-left: 2px;
+  text-shadow: 1px 1px 3px rgba(255, 140, 0, 0.2);
+}
+
+.card-date {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+  padding-left: 2px;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 165, 0, 0.2);
+}
+
+/* Swiper arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #ff6b35;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 140, 0, 0.15);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 140, 0, 0.3);
+}

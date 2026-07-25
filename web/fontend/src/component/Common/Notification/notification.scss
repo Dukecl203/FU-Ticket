@@ -1,0 +1,44 @@
+.notifications-root {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none; /* allow clicks through empty areas */
+}
+
+.notification-item {
+  pointer-events: auto;
+  min-width: 220px;
+  max-width: 420px;
+  padding: 0.65rem 0.75rem;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.notification-item .notification-message {
+  flex: 1 1 auto;
+}
+
+.notification-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.notification-item.info { background: linear-gradient(90deg,#2f80ed,#56ccf2); }
+.notification-item.success { background: linear-gradient(90deg,#12c998,#06b16a); }
+.notification-item.error { background: linear-gradient(90deg,#ff6b6b,#ff5252); }
+.notification-item.warning { background: linear-gradient(90deg,#f2c94c,#f2994a); }

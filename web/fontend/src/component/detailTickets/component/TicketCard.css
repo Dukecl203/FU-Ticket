@@ -1,0 +1,379 @@
+.tk-ticket-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+.tk-breadcrumb {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.tk-breadcrumb .tk-separator {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+/* Thẻ Ticket chính */
+.tk-ticket-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+/* Banner sự kiện */
+.tk-event-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.tk-event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tk-event-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.tk-event-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Nội dung */
+.tk-ticket-content {
+  padding: 32px;
+}
+
+/* Thông tin vé */
+.tk-ticket-info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.tk-info-left {
+  flex: 1;
+}
+
+.tk-info-item {
+  margin-bottom: 24px;
+}
+
+.tk-info-label {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tk-info-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.tk-info-value.tk-green {
+  color: #f97316;
+}
+
+/* QR */
+.tk-info-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tk-qr-section {
+  text-align: center;
+}
+
+.tk-qr-placeholder {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tk-qr-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.tk-qr-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tk-qr-lock {
+  font-size: 32px;
+  color: #f97316;
+}
+
+.tk-app-download-text {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.tk-ticketbox-text {
+  color: #f97316;
+  font-weight: 500;
+}
+
+.tk-qr-code-text {
+  color: #888;
+}
+
+/* Nút số lượng */
+.tk-ticket-quantity {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tk-quantity-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tk-quantity-btn:hover {
+  border-color: #f97316;
+  color: #f97316;
+  background-color: #fff7ed;
+}
+
+.tk-quantity-btn.tk-active {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #fff;
+}
+
+/* Các section thông tin */
+.tk-order-section,
+.tk-buyer-section,
+.tk-order-details-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Header của section */
+.tk-order-header,
+.tk-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f97316;
+}
+
+.tk-order-title,
+.tk-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Bảng */
+.tk-order-table,
+.tk-info-table,
+.tk-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tk-order-table thead tr,
+.tk-details-table thead tr {
+  background-color: #fff7ed;
+}
+
+.tk-order-table th,
+.tk-details-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f97316;
+  border-bottom: 2px solid #f97316;
+}
+
+.tk-order-table td,
+.tk-details-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+/* Bảng thông tin */
+.tk-info-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.tk-info-table td {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.tk-label-cell {
+  color: #888;
+  width: 200px;
+  background-color: #f9fafb;
+}
+
+.tk-value-cell {
+  color: #333;
+}
+
+/* Giá và tổng */
+.tk-ticket-type {
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.tk-ticket-price {
+  color: #888;
+  font-size: 13px;
+}
+
+.tk-subtotal-row td {
+  font-weight: 500;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.tk-total-row td {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111;
+  border-bottom: none;
+}
+
+.tk-total-amount {
+  color: #f97316;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tk-ticket-container {
+    padding: 16px;
+  }
+
+  .tk-ticket-info-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tk-event-banner {
+    height: 250px;
+  }
+
+  .tk-event-title {
+    font-size: 18px;
+  }
+
+  .tk-ticket-content {
+    padding: 20px;
+  }
+
+  .tk-qr-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tk-order-table,
+  .tk-info-table,
+  .tk-details-table {
+    font-size: 13px;
+  }
+
+  .tk-order-table th,
+  .tk-order-table td,
+  .tk-details-table th,
+  .tk-details-table td {
+    padding: 12px 8px;
+  }
+}
+.tk-orange {
+  color: #ff7b00;
+  font-weight: 600;
+}
+
+.tk-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.tk-page-btn {
+  background-color: #fff;
+  border: 2px solid #ff7b00;
+  color: #ff7b00;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.tk-page-btn.active {
+  background-color: #ff7b00;
+  color: #fff;
+}
+
+.tk-page-btn:hover {
+  background-color: #ff9b33;
+  color: #fff;
+}

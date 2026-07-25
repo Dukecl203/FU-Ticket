@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "fu-ticket-mobie",
+    "slug": "fu-ticket-mobie",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo2.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logo2.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.binhphung.futicketmobie",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo2.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.binhphung.futicketmobie",
+      "runtimeVersion": "1.0.0"
+    },
+    "web": {
+      "favicon": "./assets/logo2.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6abe29e0-35e5-4de0-b5f2-dc457aabd6a8"
+      }
+    },
+    "owner": "binhpthe1fpt",
+    "updates": {
+      "url": "https://u.expo.dev/6abe29e0-35e5-4de0-b5f2-dc457aabd6a8"
+    }
+  }
+}
